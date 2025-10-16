@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+<body>
+    <h1>Ejercicios de JavaScript</h1>
+
+        <p>3.1. Escribe un programa que solicite al usuario el radio de un círculo y luego calcule y muestre el área y el perímetro del círculo.</p>
+
+        <p>• Solicita al usuario que ingrese el radio del círculo.</p>
+
+        <label for="radio">Ingrese el radio del circulo:</label>
+        <input type="number" id="radio">
+        <button onclick="guardarRadio()">Enviar</button>
+
+        <script>
+            function guardarRadio() {
+                return document.getElementById("radio").value;
+            }
+            let radio = guardarRadio();
+        </script>
+
+        <p>• Define dos funciones: una para calcular el área del círculo y otra para calcular el perímetro del círculo.</p>
+
+        <script>
+            function calcularArea(radio) {
+                return 3.14*radio**2;
+            }
+            function calcularPerimetro(radio) {
+                return 2*radio*3.14;
+            }
+        </script>
+
+        <p>• Usa las fórmulas matemáticas apropiadas dentro de estas funciones para calcular el área (π * radio^2) y el perímetro (2 * π * radio) del círculo.</p>
+
+        <p>• Llama a estas funciones con el radio proporcionado por el usuario como argumento.</p>
+        <p>• Muestra los resultados del área y el perímetro al usuario.</p>
+
+        <p id="area"></p>
+        <p id="perimetro"></p>
+
+        <script>
+            document.getElementById("area").innerHTML="Area del circulo: " + calcularArea(radio);
+            document.getElementById("perimetro").innerHTML="Perimetro del circulo: " + calcularPerimetro(radio);
+        </script>
+
+        <p>3.2. Escribe una función llamada <code>calculatePower</code> que tome dos parámetros: base y exponent. Esta función debe calcular y devolver el resultado de elevar la base al exponente.</p>
+
+
+        <p>Ejemplo:</p>
+        <p><code>// Llamada a la función<br>
+        let result = calculatePower(2, 3);<br>
+        console.log(result); // Resultado esperado: 8</code></p>
+
+        <p id="resultado"></p>
+
+        <script>
+            function calculatePower(base, exponent) {
+                return base**exponent
+            }
+            let result = calculatePower(2,3);
+            document.getElementById("resultado").innerHTML="Resultado esperado: " + result;
+        </script>
+
+</body>
+</html>
