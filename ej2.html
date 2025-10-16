@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <h1>2. Ejercicio 2 JS: Estructuras de control</h1>
+
+    <h2>Condicionales (if, else if, else):</h2>
+    <p>2.1. Escribe un programa que verifique si un número es positivo, negativo o cero e imprima el resultado.</p>
+
+    <p id="2_1"></p>
+
+    <script>
+        let num1=0
+        if (num1>0) {
+            document.getElementById("2_1").innerHTML="Es positivo";
+        } else if (num1<0){
+            document.getElementById("2_1").innerHTML="Es negativo";
+        } else {
+            document.getElementById("2_1").innerHTML="Es cero";
+        }
+    </script>
+
+    <p>2.2. Crea un programa que determine si una persona es menor de edad, adulta o anciana según su edad.</p>
+
+    <p id="2_2"></p>
+
+    <script>
+        let edad=18
+        if (edad<18) {
+            document.getElementById("2_2").innerHTML="Es menor de edad";
+        } else {
+            document.getElementById("2_2").innerHTML="Es mayor de edad";
+        }
+
+    </script>
+
+    <h2>Bucles (for, while, do-while):</h2>
+
+    <p>2.3. Utiliza un bucle for para imprimir los valores de i desde 0 hasta 4.</p>
+
+    <p id="2_3_1"></p>
+    <p id="2_3_2"></p>
+    <p id="2_3_3"></p>
+    <p id="2_3_4"></p>
+    <p id="2_3_5"></p>
+    
+    <script>
+        const lista_ids=["2_3_1", "2_3_2", "2_3_3", "2_3_4", "2_3_5" ];
+        for (let i=0; i<5; i++){
+            document.getElementById(lista_ids[i]).innerHTML=i;
+        }
+    </script>
+
+    <p>2.4. Utiliza un bucle while para imprimir los valores del contador desde 0 hasta 4.</p>
+
+    <p id="2_4_1"></p>
+    <p id="2_4_2"></p>
+    <p id="2_4_3"></p>
+    <p id="2_4_4"></p>
+    <p id="2_4_5"></p>
+
+    <script>
+        let i=0;
+        const lista_ids2=["2_4_1", "2_4_2", "2_4_3", "2_4_4", "2_4_5" ];
+        while (i<5){
+            document.getElementById(lista_ids2[i]).innerHTML=i;
+            i++;
+        }
+    </script>
+
+    <p>2.5. Emplea un bucle do-while para imprimir los valores de x desde 0 hasta 4.</p>
+
+    <p id="2_5_1"></p>
+    <p id="2_5_2"></p>
+    <p id="2_5_3"></p>
+    <p id="2_5_4"></p>
+    <p id="2_5_5"></p> 
+
+    <script>
+        const lista_ids3=["2_5_1", "2_5_2", "2_5_3", "2_5_4", "2_5_5" ];
+        i=0
+        do {
+            document.getElementById(lista_ids3[i]).innerHTML=i;
+            i++;
+        }
+        while(i<5);
+    </script>
+    
+    <h2>Interrupción de bucles (break, continue):</h2>
+    <p>2.6. Crea un bucle for que se detenga cuando i sea igual a 3 usando la instrucción break.</p>
+
+    <p id="2_6_1"></p>
+    <p id="2_6_2"></p>
+    <p id="2_6_3"></p>
+    <p id="2_6_4"></p>
+    <p id="2_6_5"></p>
+
+    <script>
+        const lista_ids6=["2_6_1", "2_6_2", "2_6_3", "2_6_4", "2_6_5" ];
+        i=0
+        for (let i=0; i<5; i++){
+            document.getElementById(lista_ids6[i]).innerHTML=i;
+            if (i==3){
+                break
+            }
+        }
+    </script>
+
+
+
+    <p>2.7. Implementa un bucle for que salte la iteración cuando j sea igual a 2 usando la instrucción continue.</p>
+
+    <p id="2_7_1"></p>
+    <p id="2_7_2"></p>
+    <p id="2_7_3"></p>
+    <p id="2_7_4"></p>
+    <p id="2_7_5"></p>
+
+    <script>
+        const lista_ids7=["2_7_1", "2_7_2", "2_7_3", "2_7_4", "2_7_5" ];
+        i=0
+        for (let i=0; i<5; i++){
+            if (i==3){
+                continue
+            }
+                    
+            document.getElementById(lista_ids7[i]).innerHTML=i;
+        }
+        </script>
+
+
+    <h2>Condicional (switch):</h2>
+    <p>2.8. Convierte un número del 1 al 12 en el nombre del mes correspondiente. El programa debe solicitar al usuario que ingrese un número del 1 al 12 y luego mostrar el nombre del mes asociado.</p>
+
+    <p id="2_8"></p>
+    
+    <script>
+        let mes = 7;
+        let nombreMes;
+        switch (mes) {
+            case 1:
+                nombreMes = "Enero";
+                break;
+            case 2:
+                nombreMes = "Febrero";
+                break;
+            case 3:
+                nombreMes = "Marzo";
+                break;
+            case 4:
+                nombreMes = "Abril";
+                break;
+            case 5:
+                nombreMes = "Mayo";
+                break;
+            case 6:
+                nombreMes = "Junio";
+                break;
+            case 7:
+                nombreMes = "Julio";
+                break;
+            case 8:
+                nombreMes = "Agosto";
+                break;
+            case 9:
+                nombreMes = "Septiembre";
+                break;
+            case 10:
+                nombreMes = "Octubre";
+                break;
+            case 11:
+                nombreMes = "Noviembre";
+                break;
+            case 12:
+                nombreMes = "Diciembre";
+                break;
+            default:
+                nombreMes= "Ninguno. Tu respuesta no fue valida" 
+        }
+        document.getElementById("2_8").innerHTML="El mes correspondiente es " + nombreMes
+    </script>
+
+</body>
+</html>

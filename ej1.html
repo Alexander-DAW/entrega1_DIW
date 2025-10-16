@@ -140,14 +140,21 @@
         let num1=2;
         let num2=4;
         let suma=num1+num2;
-        let resta=num1+num2;
-        let multiplicacion=num1+num2;
-        let division=num1+num2;
+        let resta=num1-num2;
+        let multiplicacion=num1*num2;
+        let division=num1/num2;
         let suma_de_unidad=num1++;
         let resta_de_unidad=num2--;
+        document.getElementById("1_11").innerHTML=suma + '<br>' + resta + '<br>' + multiplicacion + '<br>' + division + '<br>' + suma_de_unidad + '<br>' + resta_de_unidad;
     </script>
     <h2>Strings:</h2>
     <p>1.12. Declara una variable con una cadena de texto de varias líneas usando caracteres de escape (\n, \t). Imprime la cadena resultante en la consola</p>
-def sdfdjfds(variable)
+
+    <p id="1_12"></p>
+
+    <script>
+        cadena_escape="Hola\nesto\nes\nuna\ncadena";
+        document.getElementById("1_12").innerHTML=cadena_escape;
+    </script>
 </body>
 </html>
